@@ -1,0 +1,322 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 50px;
+  background-color: rgb(230, 230, 230);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+/* Стили карточек католога  */
+.cards {
+  /* width: 75%;
+  outline: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  gap: 20px;
+}
+
+.cards__title {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(31, 30, 30);
+}
+
+.cards__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 260px;;
+  padding: 10px;
+  min-height: 400px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 5px 10px 0 #808080b0;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.card__img {
+  object-fit: contain;
+}
+
+.card__subtitle {
+  font-size: 20px;
+  font-weight: 800;
+  color: rgb(31, 30, 30);
+}
+
+.card__desc {
+  font-size: 18px;
+  color: rgb(100, 100, 100);
+}
+
+.card__price {
+  font-size: 20px;
+  font-weight: 800;
+  color: rgb(31, 30, 30);
+}
+
+/* Стили кнопки в карточке */
+.card__btn {
+  padding: 10px 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: rgb(11, 175, 11);
+  transition: background-color .3s ease-in;
+}
+
+.card__btn:focus-visible {
+  outline-offset: 3px;
+  outline: 3px solid rgb(11, 175, 11);
+}
+
+.card__btn:hover {
+  background-color: rgb(2, 235, 2);
+}
+
+.card__btn:active {
+  background-color: rgb(1, 121, 1);
+}
+
+/* Стили корзины */
+.basket {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-grow: 1;
+}
+
+.basket__box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 20px 0;  
+}
+
+.hidden {
+  display: none;
+}
+
+.basket__list {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 5px 10px 0 #808080b0;
+  gap: 40px;
+}
+
+.basket__card {
+  display: flex;
+  background-color: white;
+  gap: 20px;
+}
+
+.basket__no-item {
+  height: 200px;
+  padding-top: 30px;
+  font-size: 20px;
+  align-self: center;
+  background-color: white;
+}
+
+.basket__card-img {
+  width: 80px;
+  object-fit: contain;
+}
+
+.basket__card-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: auto;
+}
+
+.basket__card-subtitle{
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(31, 30, 30);
+}
+
+.basket__card-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(31, 30, 30);
+}
+
+/* Кнопка заказа */
+.basket__btn-order {
+  padding: 20px 15px;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  background-color: rgb(206, 0, 0);
+  outline: none;
+  border: none;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 5px 10px 0 #808080b0;
+  transition: background-color .3s ease-in;
+}
+
+.basket__btn-order:focus-visible {
+  outline-offset: 3px;
+  outline: 3px solid rgb(206, 0, 0);
+}
+
+.basket__btn-order:hover {
+  background-color: rgb(255, 0, 0);
+}
+
+.basket__btn-order:active {
+  background-color: rgb(163, 0, 0);
+}
+
+/* Кнопка удаления */
+.basket__btn-delete {
+  padding: 10px 15px;
+  align-self: center;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  background-color: darkblue;
+  transition: background-color .3s ease-in;
+}
+
+.basket__btn-delete:focus-visible {
+  outline-offset: 3px;
+  outline: 3px solid darkblue;
+}
+
+.basket__btn-delete:hover {
+  background-color: rgb(0, 0, 255);
+}
+
+.basket__btn-delete:active {
+  background-color: rgb(0, 0, 111);
+}
+
+
+/* Стили футера */
+.footer__btn-box {
+  display: flex;
+  justify-content: end;
+  height: 80px;
+}
+
+.basket__btn-open {
+  width: 80px;
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  background-color: rgb(11, 175, 11);
+  box-shadow: 0 5px 10px 0 #808080b0;
+  background-image: url("../img/close.svg");
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-color .3s ease-in;
+}
+
+.basket__btn-open:focus-visible {
+  outline-offset: 3px;
+  outline: 3px solid rgb(11, 175, 11);;
+}
+
+.basket__btn-open:hover {
+  background-color: rgb(2, 235, 2);
+}
+
+.basket__btn-open:active {
+  background-color: rgb(1, 121, 1);
+}
+
+.basket__btn {
+  width: 80px;
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  background-color: rgb(11, 175, 11);
+  box-shadow: 0 5px 10px 0 #808080b0;
+  background-image: url("../img/basket.svg");
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-color .3s ease-in;
+}
+
+.basket__btn:focus-visible {
+  outline-offset: 3px;
+  outline: 3px solid rgb(11, 175, 11);;
+}
+
+.basket__btn:hover {
+  background-color: rgb(2, 235, 2);
+}
+
+.basket__btn:active {
+  background-color: rgb(1, 121, 1);
+}
+
