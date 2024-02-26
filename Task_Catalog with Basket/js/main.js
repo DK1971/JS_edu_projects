@@ -70,7 +70,7 @@ function getCard(arr) {
   // Кнопка добавления товара в корзину
   cardBtn.onclick = function () {
     basketArr.push(arr)
-    console.log(basketArr)
+    //console.log(basketArr)
     renderBasket(basketArr) // Перерисовка списка товаров в КОРЗИНЕ
   }
   card.append(cardImg, cardTitle, cardDesc, cardPrice, cardBtn)
@@ -96,8 +96,8 @@ function getCardInBasket(index, arr) {
   return basketCard;
 }
 
+// Отрисовка приложения
 const container = getBox("container");
-
 const box = getBox("wrap");
 // КАТАЛОГ товаров
 const boxCards = getBox("cards")
